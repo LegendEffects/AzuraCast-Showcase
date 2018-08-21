@@ -1,0 +1,120 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.view--background {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+
+    filter: blur(2px);
+    transform: scale(1.1);
+
+    background-size: cover;
+}
+.view--container {
+    position: absolute;
+    padding: 4rem;
+
+    color: #fff;
+}
+.view--radio {
+    font-size: 4rem;
+}
+.view--progress {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.radio--song {
+    font-weight: bold;
+    display: block;
+}
+.radio--duration {
+    position: relative;
+    bottom: 0;
+}
+.radio--duration--text {
+    color: #fff;
+    margin-left: 2rem;
+    right: 10px;
+}
+.radio--progress--bar {
+    width: 100%;
+}
+
+
+/* Slider */
+.slidecontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #8a8a8a;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+.slider::-moz-range-progress {
+    height: 15px;
+    width: 25px;
+    border-radius: 5px;
+    background: #3498db;
+    margin-top: 0;
+}
+.slider::-ms-fill-lower {
+    background: #3498db;
+    border-radius: 5px;
+}
+
+/*The progress element*/
+.progress-main {
+    background-color: #8a8a8a; /*This could be any colour*/
+    width: 100%;
+    height: 0.4em;
+    margin-bottom: -4px;
+}
+/*For firefox*/
+.progress-main::-moz-progress-bar {
+    background: #3498db;
+}
+/*For webkit browsers*/
+.progress-main::-webkit-progress-bar {
+    background: #8a8a8a;
+}
+.progress-main::-webkit-progress-value {
+    background: #3498db;
+}
+/*For IE*/
+.progress-main::-ms-fill {
+    background: #3498db;
+}
