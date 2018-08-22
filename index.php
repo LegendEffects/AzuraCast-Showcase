@@ -11,7 +11,7 @@
             player: 'http://192.168.1.71:8000/radio.mp3?1522176106',
             ip: 'http://192.168.1.71',
             stationID: 1,
-            volume: 25,
+            volume: 0.15,
         }
     </script>
 </head>

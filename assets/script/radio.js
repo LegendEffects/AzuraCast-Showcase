@@ -19,6 +19,7 @@ $(function() {
                 player.once('load', function(){
                     player.volume(options.volume);
                 });
+
                 setInterval(iterator, 1000);
                 backend.setup = true;
             }
@@ -53,7 +54,6 @@ $(function() {
             elements.progress.text.textContent = `(${formatTime(elapsed)}/${formatTime(total)})`;
         } else {
             forceNowPlaying();
-
         }
 
         let percent = (elapsed / total) * 100;
@@ -65,10 +65,8 @@ $(function() {
         } catch (TypeError) {
             console.error("Duration == 0");
         }
-
     }
     function formatTime(time) {
-
         var sec_num = parseInt(time, 10);
         var hours = Math.floor(sec_num / 3600);
         var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
@@ -84,7 +82,5 @@ $(function() {
             seconds = "0" + seconds;
         }
         return (hours !== "00" ? hours + ':' : "") + minutes + ':' + seconds;
-
-
     }
 });
